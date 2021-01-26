@@ -33,7 +33,7 @@ def Euler(F,x0,T):
     n=len(T)
     X=[x0]
     for i in range(n-1):
-        y=X[-1]+T[i+1]-T[i]*F(X[-1],T[i])
+        y=X[-1]+(T[i+1]-T[i])*F(X[-1],T[i])
         X.append(y)
     return np.array(X)
 
